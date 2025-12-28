@@ -59,5 +59,28 @@ clear.addEventListener('click',() =>{
 })
 //importation des taches
 load.addEventListener('click',()=>{
-    
+    fetch(url.value)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`${response.statusText} (${response.status})`)
+        }
+        return response.json()
+    })
+    .then(tasks => {
+        if (!Array.isArray(tasks)) {
+            throw new TypeError(
+                `La réponse n'est pas un tableau JSON (type : ${typeof tasks})`
+            )
+        }
+
+        tasks.forEach(task => {
+            if (storage.list.indexOf(task) === -1 && dom(task)) {
+                storage.set(task)
+            }
+        })
+    })
+    .catch(err => {
+        console.error(err)
+        alert('Erreur lors du chargement du JSON')
+    })
 })
