@@ -1,0 +1,34 @@
+body{
+    width: 100%;
+}
+.wrapper{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    background-color: violet;
+    color: black;
+    cursor: pointer;
+
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    display:block;
+    align-items: center;
+    justify-content: center;
+}
+input , button{
+ align-items: center;
+}
+.actions{
+    align-items: center;
+    position: relative;
+}
