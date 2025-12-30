@@ -1,0 +1,28 @@
+body{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    padding:25px;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 2rem;
+    color: #9C96E3;
+    text-align: center;
+    margin-bottom:25px;
+}
+form , p{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+}
+div p{
+    margin-top: 15px;
+}
